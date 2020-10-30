@@ -5,7 +5,7 @@ import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import axios from 'axios';
 
-export default function Form() {
+const Form = () => {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -88,7 +88,12 @@ export default function Form() {
           multiline
           rows={5}
         />
-        <Button variant="contained" color="primary" onClick={ handleSubmit}>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={handleSubmit}
+          disabled={name === "" || email === "" || subject === "" || text === "" ? true : false}
+        >
           Submit
         </Button>
         <Snackbar
@@ -106,3 +111,5 @@ export default function Form() {
       </form>
   );
 }
+
+export default Form;
