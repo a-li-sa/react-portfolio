@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
 import axios from 'axios';
 
 export default function Form() {
@@ -9,6 +11,7 @@ export default function Form() {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [text, setText] = useState('');
+  const [snackbar, setSnackbar] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,12 +21,24 @@ export default function Form() {
       text,
     })
       .then(res => {
-        setName('');
-        setEmail('');
-        setSubject('');
-        setText('');
+        clearStates();
+        setSnackbar(true);
       });
   }
+
+  const clearStates = () => {
+    setName('');
+    setEmail('');
+    setSubject('');
+    setText('');
+  }
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setSnackbar(false);
+  };
 
   return (
       <form>
@@ -50,7 +65,7 @@ export default function Form() {
           variant="outlined"
         />
         <TextField
-          name={subject}
+          value={subject}
           onChange={(e) => setSubject(e.target.value)}
           label="Subject"
           fullWidth
@@ -61,7 +76,7 @@ export default function Form() {
           variant="outlined"
         />
         <TextField
-          name={text}
+          value={text}
           onChange={(e) => setText(e.target.value)}
           label="Message"
           fullWidth
@@ -73,9 +88,21 @@ export default function Form() {
           multiline
           rows={5}
         />
-        <Button variant="contained" color="primary" onClick={handleSubmit}>
+        <Button variant="contained" color="primary" onClick={ handleSubmit}>
           Submit
         </Button>
+        <Snackbar
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'center',
+          }}
+          open={snackbar}
+          autoHideDuration={2750}
+          onClose={handleClose}>
+          <MuiAlert onClose={handleClose} severity="success">
+            Your message has been sent.
+          </MuiAlert>
+        </Snackbar>
       </form>
   );
 }
