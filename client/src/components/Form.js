@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
+import Textfield from './Textfield';
 import axios from 'axios';
 
 const Form = () => {
@@ -42,49 +42,25 @@ const Form = () => {
 
   return (
       <form>
-        <TextField
+        <Textfield
           value={name}
           onChange={(e) => setName(e.target.value)}
           label="Name"
-          fullWidth
-          margin="normal"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          variant="outlined"
         />
-        <TextField
+        <Textfield
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           label="Email"
-          fullWidth
-          margin="normal"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          variant="outlined"
         />
-        <TextField
+        <Textfield
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
           label="Subject"
-          fullWidth
-          margin="normal"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          variant="outlined"
         />
-        <TextField
+        <Textfield
           value={text}
           onChange={(e) => setText(e.target.value)}
           label="Message"
-          fullWidth
-          margin="normal"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          variant="outlined"
           multiline
           rows={5}
         />
