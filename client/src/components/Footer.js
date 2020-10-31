@@ -1,13 +1,37 @@
 import React from 'react';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import IconButton from '@material-ui/core/IconButton';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+
+const useStyles = makeStyles((theme) => ({
+  footer: {
+    position: 'absolute',
+    bottom: 0,
+    alignItems: "center",
+  },
+}));
 
 const Footer = () => {
+  const classes = useStyles();
+
   return (
-    <div>
-      Footer
-    </div>
-  )
+    <AppBar position="static" className={classes.footer}>
+      <Toolbar variant="dense">
+        <IconButton href="https://www.linkedin.com/in/alisa-poon/" target="_blank" color="inherit">
+          <LinkedInIcon />
+        </IconButton>
+        <IconButton href="https://github.com/a-li-sa" target="_blank" color="inherit">
+          <GitHubIcon />
+        </IconButton>
+        <IconButton href="https://medium.com/@a_li_sa" target="_blank" color="inherit">
+          <i className="fab fa-medium-m"></i>
+        </IconButton>
+      </Toolbar>
+    </AppBar>
+  );
 }
 
 export default Footer;
