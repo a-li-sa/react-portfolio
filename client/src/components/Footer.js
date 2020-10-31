@@ -8,9 +8,10 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    position: 'absolute',
+    width: '100%',
+    position: 'fixed',
     bottom: 0,
-    alignItems: "center",
+    alignItems: 'center',
   },
 }));
 
@@ -18,7 +19,7 @@ const Footer = () => {
   const classes = useStyles();
 
   return (
-    <AppBar position="static" className={classes.footer}>
+    <AppBar color="inherit" position="static" className={classes.footer} elevation={0}>
       <Toolbar variant="dense">
         <IconButton href="https://www.linkedin.com/in/alisa-poon/" target="_blank" color="inherit">
           <LinkedInIcon />
