@@ -37,7 +37,7 @@ export default function SimpleTabs() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color="transparent" elevation={0}>
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
           <Tab label="Alisa Poon" component={Link} to="/" {...a11yProps(0)} />
           <Typography variant="h6" className={classes.title} />

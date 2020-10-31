@@ -19,7 +19,7 @@ const Footer = () => {
   const classes = useStyles();
 
   return (
-    <AppBar color="inherit" position="static" className={classes.footer} elevation={0}>
+    <AppBar color="transparent" position="static" className={classes.footer} elevation={0}>
       <Toolbar variant="dense">
         <IconButton href="https://www.linkedin.com/in/alisa-poon/" target="_blank" color="inherit">
           <LinkedInIcon />
