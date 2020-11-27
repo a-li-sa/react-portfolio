@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core/';
 import PortfolioCard from "../components/PortfolioCard";
 import portfolioItems from '../apis/portfolioItems';
 
-const PortfolioPage = () => {
+export const PortfolioPage = () => {
 
   return (
     <Grid container spacing={2}>
@@ -25,5 +25,3 @@ const PortfolioPage = () => {
     </Grid>
   )
 }
-
-export default PortfolioPage;

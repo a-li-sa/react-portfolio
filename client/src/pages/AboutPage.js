@@ -1,7 +1,7 @@
 import React from 'react';
 import TimeLine from '../components/TimeLine';
 
-const AboutPage = () => {
+export const AboutPage = () => {
   return (
     <div>
       <TimeLine />
@@ -9,4 +9,3 @@ const AboutPage = () => {
   )
 }
 
-export default AboutPage;
