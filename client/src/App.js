@@ -1,23 +1,32 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
-import PortfolioPage from './pages/PortfolioPage';
-import NavBar from './components/NavBar';
-import Footer from './components/Footer';
+import ReactFullpage from '@fullpage/react-fullpage';
+import {AboutPage, ContactPage, PortfolioPage} from './pages';
 
-const App = () => {
-  return (
-    <div>
-      <BrowserRouter>
-        <NavBar/>
-        <Route path="/about" exact component={AboutPage} />
-        <Route path="/contact" exact component={ContactPage} />
-        <Route path="/portfolio" exact component={PortfolioPage} />
-      </BrowserRouter>
-      <Footer/>
-    </div>
-  )
-}
+const fullpageOptions = {
+  anchors: ['', 'portfolio','about','contact'],
+  navigation: true,
+};
+
+const App = fullpageProps => (<ReactFullpage
+  {...fullpageProps}
+  {...fullpageOptions}
+  render={({ state, fullpageApi }) => {
+    return (
+      <div>
+        <div className="section">
+        </div>
+        <div className="section">
+          <PortfolioPage/>
+        </div>
+        <div className="section">
+          <AboutPage/>
+        </div>
+        <div className="section">
+          <ContactPage/>
+        </div>
+      </div>
+    );
+  }}
+/>);
 
 export default App;

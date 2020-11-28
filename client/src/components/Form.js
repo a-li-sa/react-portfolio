@@ -74,7 +74,7 @@ const Form = () => {
         </Button>
         <Snackbar
           anchorOrigin={{
-            vertical: 'top',
+            vertical: 'bottom',
             horizontal: 'center',
           }}
           open={snackbar}
