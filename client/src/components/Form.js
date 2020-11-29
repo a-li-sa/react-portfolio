@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
-import Textfield from './Textfield';
+import { Textfield } from './Textfield';
 import axios from 'axios';
 
-const Form = () => {
+export const Form = () => {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -87,5 +87,3 @@ const Form = () => {
       </form>
   );
 }
-
-export default Form;

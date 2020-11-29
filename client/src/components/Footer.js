@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Footer = () => {
+export const Footer = () => {
   const classes = useStyles();
 
   return (
@@ -34,5 +34,3 @@ const Footer = () => {
     </AppBar>
   );
 }
-
-export default Footer;

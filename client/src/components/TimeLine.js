@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const TimeLine = () => {
+export const TimeLine = () => {
   const classes = useStyles();
 
   return (
@@ -145,5 +145,3 @@ const TimeLine = () => {
     </Timeline>
   );
 }
-
-export default TimeLine;

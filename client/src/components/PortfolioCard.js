@@ -12,11 +12,8 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 
 const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-  },
   media: {
-    height: 345,
+    height: '50vh',
   },
   modal: {
     display: 'flex',
@@ -25,7 +22,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function PortfolioCard(props) {
+export function PortfolioCard(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {

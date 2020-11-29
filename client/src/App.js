@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
-import {AboutPage, ContactPage, PortfolioPage} from './pages';
+import {AboutPage, ContactPage, HomePage, PortfolioPage} from './pages';
+import "./styles.css";
 
 const fullpageOptions = {
   anchors: ['', 'portfolio','about','contact'],
   navigation: true,
+  navigationPosition: 'left',
+  navigationTooltips: ['home', 'portfolio', 'about', 'contact'],
+  showActiveTooltip: true,
+  scrollOverflow: true,
 };
 
 const App = fullpageProps => (<ReactFullpage
@@ -14,6 +19,7 @@ const App = fullpageProps => (<ReactFullpage
     return (
       <div>
         <div className="section">
+          <HomePage/>
         </div>
         <div className="section">
           <PortfolioPage/>

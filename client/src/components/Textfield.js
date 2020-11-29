@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 
-const Textfield = (props) => {
+export const Textfield = (props) => {
   return (
     <TextField
       {...props}
@@ -14,5 +14,3 @@ const Textfield = (props) => {
     />
   )
 }
-
-export default Textfield;
