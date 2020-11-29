@@ -1,14 +1,13 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Box from '@material-ui/core/Box'
-import AppBar from '@material-ui/core/AppBar';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Grid from "@material-ui/core/Grid";
-import Toolbar from '@material-ui/core/Toolbar';
+import Box from "@material-ui/core/Box"
 import Tooltip from '@material-ui/core/Tooltip';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import IconButton from '@material-ui/core/IconButton';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
+
 import resume from '../assets/resume.pdf'
 
 const useStyles = makeStyles((theme) => ({
@@ -20,31 +19,45 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const TextOnlyTooltip = withStyles({
+  tooltip: {
+    backgroundColor: "black",
+    fontSize: 13,
+  }
+})(Tooltip);
+
 export const Footer = () => {
   const classes = useStyles();
 
   return (
-    <Grid container direction="column" color="transparent" className={classes.footer}>
-      <Tooltip title="Resume" placement="top">
-        <IconButton target="_blank" href={resume} color="inherit">
-          <AttachFileIcon/>
-        </IconButton>
-      </Tooltip>
-      <Tooltip title="LinkedIn" placement="top">
-        <IconButton href="https://www.linkedin.com/in/alisa-poon/" target="_blank" color="inherit">
-          <LinkedInIcon />
-        </IconButton>
-      </Tooltip>
-      <Tooltip title="GitHub" placement="top">
-        <IconButton href="https://github.com/a-li-sa" target="_blank" color="inherit">
-          <GitHubIcon />
-        </IconButton>
-      </Tooltip>
-      <Tooltip title="Medium" placement="top">
-        <IconButton href="https://medium.com/@a_li_sa" target="_blank" color="inherit">
-          <i className="fab fa-medium-m"></i>
-        </IconButton>
-      </Tooltip>
-    </Grid>
+      <Grid container direction="column" color="transparent" className={classes.footer}>
+        <Box mr={2}>
+          <TextOnlyTooltip title="Resume" placement="left">
+            <IconButton target="_blank" href={resume} color="inherit">
+              <AttachFileIcon/>
+            </IconButton>
+          </TextOnlyTooltip>
+        </Box>
+        <Box mr={2}>
+          <TextOnlyTooltip title="LinkedIn" placement="left">
+            <IconButton href="https://www.linkedin.com/in/alisa-poon/" target="_blank" color="inherit">
+              <LinkedInIcon />
+            </IconButton>
+          </TextOnlyTooltip>
+        </Box>
+        <Box mr={2}>
+          <TextOnlyTooltip title="GitHub" placement="left">
+            <IconButton href="https://github.com/a-li-sa" target="_blank" color="inherit">
+              <GitHubIcon />
+            </IconButton>
+          </TextOnlyTooltip>
+        </Box>
+        <Box mr={2} mb={2}>
+          <TextOnlyTooltip title="Medium" placement="left">
+            <IconButton href="https://medium.com/@a_li_sa" target="_blank" color="inherit"><i className="fab fa-medium-m"></i>
+            </IconButton>
+          </TextOnlyTooltip>
+        </Box>
+      </Grid>
   );
 }

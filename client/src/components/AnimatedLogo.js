@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import logo from "../assets/logo.svg";
 import anime from 'animejs/lib/anime.es.js';
+
+import logo from "../assets/logo.svg";
 
 export const AnimatedLogo = () => {
   useEffect(() => {
@@ -9,7 +10,7 @@ export const AnimatedLogo = () => {
       rotate: {
         value: '-1turn',
         duration: 9000,
-        delay: 2000,
+        delay: 1500,
         easing: 'linear',
       },
       loop: true,
