@@ -35,7 +35,7 @@ export function PortfolioCard(props) {
   };
 
   return (
-    <Box m={2}>
+    <Box m={4}>
       <Card className={classes.root}>
         <CardActionArea onClick={handleOpen}>
           <CardMedia
