@@ -75,7 +75,7 @@ export const Form = () => {
         <Snackbar
           anchorOrigin={{
             vertical: 'bottom',
-            horizontal: 'center',
+            horizontal: 'left',
           }}
           open={snackbar}
           autoHideDuration={2750}

@@ -13,12 +13,10 @@ const fullpageOptions = {
   scrollOverflow: true,
   slidesNavigation: true,
   slidesNavPosition: 'top',
-  lockAnchors: true,
 };
 
 const App = fullpageProps => (
   <div>
-    <NavBar/>
     <ReactFullpage
       {...fullpageProps}
       {...fullpageOptions}
@@ -42,6 +40,7 @@ const App = fullpageProps => (
         );
       }}
     />
+    <NavBar />
     <Footer/>
   </div>
 );

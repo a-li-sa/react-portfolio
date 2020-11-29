@@ -2,9 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
+import Avatar from "@material-ui/core/Avatar";
+import Link from '@material-ui/core/Link';
 
 import logo from "../assets/logo.svg";
-import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -23,9 +24,13 @@ export const NavBar = () => {
   const classes = useStyles();
 
   return (
-    <Grid container direction="column" color="transparent" className={classes.header}>
+    <Grid container direction="column" className={classes.header}>
       <Box m={3}>
-        <Avatar alt="logo" src={logo} />
+        <Link href="#" onClick={() => {
+          document.getElementById('fp-nav').firstChild.firstChild.firstChild.click();
+        }}>
+          <Avatar alt="logo" src={logo} />
+        </Link>
       </Box>
     </Grid>
   );
