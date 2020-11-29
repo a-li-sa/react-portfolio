@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box'
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -34,44 +35,46 @@ export function PortfolioCard(props) {
   };
 
   return (
-    <Card className={classes.root}>
-      <CardActionArea onClick={handleOpen}>
-        <CardMedia
-          className={classes.media}
-          image={props.imageUrl}
-          title={props.title}
-        />
-      </CardActionArea>
-      <Modal
-        className={classes.modal}
-        open={open}
-        onClick={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={open}>
-          <img src={props.imageUrl} alt={props.title} style={{height: '100%'}}/>
-        </Fade>
-      </Modal>
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="h2">
-          {props.title}
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {props.description}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small" color="primary" href={props.githubUrl} target="_blank">
-          GitHub Repository
-        </Button>
-        <Button size="small" color="primary" href={props.appUrl} target="_blank">
-          Deployed Application
-        </Button>
-      </CardActions>
-    </Card>
+    <Box m={2}>
+      <Card className={classes.root}>
+        <CardActionArea onClick={handleOpen}>
+          <CardMedia
+            className={classes.media}
+            image={props.imageUrl}
+            title={props.title}
+          />
+        </CardActionArea>
+        <Modal
+          className={classes.modal}
+          open={open}
+          onClick={handleClose}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
+        >
+          <Fade in={open}>
+            <img src={props.imageUrl} alt={props.title} style={{height: '100%'}}/>
+          </Fade>
+        </Modal>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            {props.title}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {props.description}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small" color="primary" href={props.githubUrl} target="_blank">
+            GitHub Repository
+          </Button>
+          <Button size="small" color="primary" href={props.appUrl} target="_blank">
+            Deployed Application
+          </Button>
+        </CardActions>
+      </Card>
+    </Box>
   );
 }

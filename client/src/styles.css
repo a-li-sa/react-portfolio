@@ -1,3 +1,5 @@
-body {font-family: "Roboto", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif}
-#fp-nav {top: 60px}
+body {font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;}
+.fp-slidesNav {text-align:center;overflow:hidden;}
+#fp-nav {top: 60px!important;}
 .fp-tooltip {color: #000!important;}
+.fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {border-color: transparent #000!important;}

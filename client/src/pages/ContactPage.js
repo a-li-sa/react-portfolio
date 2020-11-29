@@ -1,10 +1,14 @@
 import React from 'react'
+import Grid from "@material-ui/core/Grid";
+
 import {Form} from '../components'
 
 export const ContactPage = () => {
   return (
-    <div>
-      <Form />
-    </div>
+    <Grid container justify="center" alignItems="center">
+      <Grid item xs={10}>
+        <Form />
+      </Grid>
+    </Grid>
   )
 }
