@@ -12,7 +12,6 @@ import resume from '../assets/resume.pdf'
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    width: '100%',
     position: 'fixed',
     bottom: 0,
     alignItems: 'flex-end',
@@ -30,7 +29,8 @@ export const Footer = () => {
   const classes = useStyles();
 
   return (
-      <Grid container direction="column" color="transparent" className={classes.footer}>
+    <Grid container direction="row" justify="flex-end">
+      <Grid xs={2} item container direction="column" className={classes.footer}>
         <Box mr={2}>
           <TextOnlyTooltip title="Resume" placement="left">
             <IconButton target="_blank" href={resume} color="inherit">
@@ -59,5 +59,6 @@ export const Footer = () => {
           </TextOnlyTooltip>
         </Box>
       </Grid>
+    </Grid>
   );
 }

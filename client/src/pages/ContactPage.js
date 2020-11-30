@@ -6,7 +6,7 @@ import {Form} from '../components'
 export const ContactPage = () => {
   return (
     <Grid container justify="center" alignItems="center">
-      <Grid item xs={10}>
+      <Grid item xs={9}>
         <Form />
       </Grid>
     </Grid>

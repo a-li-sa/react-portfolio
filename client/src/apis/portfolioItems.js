@@ -1,5 +1,12 @@
 const portfolioItems = [
   {
+    title: "Note Taker",
+    description: "This note-taking app is built with Express and deployed on Heroku. A user can write, view, and delete notes that are saved in the server.",
+    githubUrl: "https://github.com/a-li-sa/note-taker",
+    appUrl: "https://takerofthenote.herokuapp.com/",
+    imageUrl: "https://i.imgur.com/wb2WzZc.png",
+  },
+  {
     title: "SF Watch",
     description: "This app displays COVID-19, crime, and fire incidents in San Francisco. Working in a team of 4, we built this with Semantic UI, leaflet.js, and Socrata Open Data API.",
     githubUrl: "https://github.com/rpdurk/SFWatch/",
@@ -8,7 +15,7 @@ const portfolioItems = [
   },
   {
     title: "Weather Dashboard",
-    description: "This is a weather app using Open Weather Map API. This is a weather app using Open Weather Map API.",
+    description: "This is a weather app using Open Weather Map API. A user can input a city's name to view its weather information in Fahrenheit or Celsius.",
     githubUrl: "https://github.com/a-li-sa/weather-dashboard",
     appUrl: "https://a-li-sa.github.io/weather-dashboard",
     imageUrl: "https://i.imgur.com/wonnby1.png",
@@ -21,7 +28,7 @@ const portfolioItems = [
     imageUrl: "https://i.imgur.com/bk1lgjX.png",
   },
   {
-    title: "Bootstrapped Portfolio",
+    title: "Portfolio v1",
     description: "This is the first portfolio I made using Bootstrap. This website features photos taken by myself, a sticky header, carousel, fixed footer, and working links to social media.",
     githubUrl: "https://github.com/a-li-sa/responsive-portfolio",
     appUrl: "https://a-li-sa.github.io/responsive-portfolio/index.html",
