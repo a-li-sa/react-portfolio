@@ -1,4 +1,6 @@
+export * from './AboutText'
 export * from './AnimatedLogo';
+export * from './AnimatedSubtitle';
 export * from './Footer';
 export * from './Form';
 export * from './NavBar';

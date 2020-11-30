@@ -2,4 +2,7 @@ body {font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Ver
 .fp-slidesNav {text-align:center;overflow:hidden;}
 #fp-nav {top: 60px!important;}
 .fp-tooltip {color: #000!important;}
+.fp-controlArrow{
+    display:none;
+}
 .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {border-color: transparent #000!important;}
