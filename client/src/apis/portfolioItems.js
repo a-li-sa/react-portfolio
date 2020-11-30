@@ -7,6 +7,13 @@ const portfolioItems = [
     imageUrl: "https://i.imgur.com/wb2WzZc.png",
   },
   {
+    title: "Template Engine",
+    description: "Built with Node, this command-line app builds an HTML file for the user. For any engineering team, this app helps display a summary of the team's information.",
+    githubUrl: "https://github.com/a-li-sa/template-engine",
+    appUrl: "https://a-li-sa.github.io/template-engine/output/team.html",
+    imageUrl: "https://i.imgur.com/zuQLuYg.png",
+  },
+  {
     title: "SF Watch",
     description: "This app displays COVID-19, crime, and fire incidents in San Francisco. Working in a team of 4, we built this with Semantic UI, leaflet.js, and Socrata Open Data API.",
     githubUrl: "https://github.com/rpdurk/SFWatch/",

@@ -12,7 +12,8 @@ const fullpageOptions = {
   navigationTooltips: ['Home', 'Portfolio', 'About', 'Contact'],
   scrollOverflow: true,
   slidesNavigation: true,
-  slidesNavPosition: 'top',
+  slidesNavPosition: 'bottom',
+  showActiveTooltip: true,
 };
 
 const App = fullpageProps => (

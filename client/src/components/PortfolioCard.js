@@ -1,19 +1,24 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles, withStyles} from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box'
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import Link from '@material-ui/core/Link';
+import IconButton from '@material-ui/core/IconButton';
+import CodeIcon from '@material-ui/icons/Code';
+import ComputerIcon from '@material-ui/icons/Computer';
+import Tooltip from "@material-ui/core/Tooltip";
 
 const useStyles = makeStyles({
+  root: {
+    textAlign: "center",
+  },
   media: {
     height: '50vh',
   },
@@ -22,7 +27,19 @@ const useStyles = makeStyles({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  action: {
+    display: 'flex',
+    justifyContent: 'center',
+  }
 });
+
+const TextOnlyTooltip = withStyles({
+  tooltip: {
+    backgroundColor: "black",
+    fontSize: 14,
+  }
+})(Tooltip);
+
 
 export function PortfolioCard(props) {
   const classes = useStyles();
@@ -37,7 +54,15 @@ export function PortfolioCard(props) {
 
   return (
     <Box m={4}>
-      <Card className={classes.root}>
+      <Card className={classes.root} variant="outlined">
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            {props.title}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {props.description}
+          </Typography>
+        </CardContent>
         <CardActionArea onClick={handleOpen}>
           <CardMedia
             className={classes.media}
@@ -59,21 +84,17 @@ export function PortfolioCard(props) {
             <img src={props.imageUrl} alt={props.title} style={{height: '100%'}}/>
           </Fade>
         </Modal>
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.title}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {props.description}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small" color="primary" href={props.githubUrl} target="_blank">
-            GitHub Repository
-          </Button>
-          <Button size="small" color="primary" href={props.appUrl} target="_blank">
-            Deployed Application
-          </Button>
+        <CardActions className={classes.action}>
+          <TextOnlyTooltip title="GitHub Repository" placement="left">
+            <IconButton  color="inherit" href={props.githubUrl} target="_blank">
+              <CodeIcon/>
+            </IconButton>
+          </TextOnlyTooltip>
+          <TextOnlyTooltip title="Deployed Application" placement="right">
+            <IconButton color="inherit" href={props.appUrl} target="_blank">
+              <ComputerIcon/>
+            </IconButton>
+          </TextOnlyTooltip>
         </CardActions>
       </Card>
     </Box>
