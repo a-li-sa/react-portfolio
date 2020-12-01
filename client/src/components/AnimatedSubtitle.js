@@ -2,10 +2,12 @@ import React, {useEffect} from 'react';
 import anime from 'animejs/lib/anime.es.js';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles({
   root: {
     cursor: "pointer",
+    textAlign: "center",
   },
 });
 
@@ -41,8 +43,10 @@ export const AnimatedSubtitle = (props) => {
   }, [])
 
   return (
-    <Typography className={classes.root} id="subtitle" component="h2" variant="button" onClick={props.onClick}>
-      Fullstack developer currently based in San Francisco
-    </Typography>
+    <Box m={5}>
+      <Typography className={classes.root} id="subtitle" component="h2" variant="button" onClick={props.onClick}>
+        Fullstack developer currently based in San Francisco
+      </Typography>
+    </Box>
   )
 }

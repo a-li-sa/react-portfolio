@@ -33,6 +33,8 @@ const App = fullpageProps => {
                 <Grid container justify="center" alignItems="center">
                   <Grid item>
                     <HomePage/>
+                  </Grid>
+                  <Grid item>
                     <AnimatedSubtitle onClick={() => fullpageApi.moveSectionDown()}/>
                   </Grid>
                 </Grid>
