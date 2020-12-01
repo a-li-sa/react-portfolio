@@ -30,7 +30,7 @@ export const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8080/email',{
+    axios.post('/email',{
       email,
       subject: `${name}: ${subject}`,
       text,
