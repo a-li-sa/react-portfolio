@@ -4,7 +4,7 @@
 
 Built with HTML, CSS, JavaScript, and Bootstrap.
 
-Deployed Website: https://alisapoon.herokuapp.com/#
+Deployed Website: https://alisapoon.herokuapp.com/
 
 GitHub Repository: https://github.com/a-li-sa/react-portfolio
 
@@ -19,12 +19,11 @@ Previously: https://github.com/a-li-sa/portfolio
 * [Usage](#usage)
 * [Project Status](#project-status)
 * [Built With](#built-with)
-* [Credits](#credits)
 * [License](#license)
 
 ## Description 
 
-This portfolio uses [Fullpage.js](https://alvarotrigo.com/fullPage/] to make a single page website), [Anime.js](https://animejs.com/) to create the animations, and [Material UI](https://material-ui.com/) components.
+This portfolio uses [Fullpage.js](https://alvarotrigo.com/fullPage/) to make a single page website), [Anime.js](https://animejs.com/) to create the animations, and [Material UI](https://material-ui.com/) components.
 
 ## View
 
@@ -41,9 +40,15 @@ Click on your arrow keys or the dot navigation to view the portfolio items on th
 ## Project Status 
 
 * The Portfolio page will be updated regularly to include new projects.
-* The About Me page may be updated to provide more descriptive body texts in the panels.
 
 <a name="built-with"></a>
+
+## Built With
+
+* [React.js](https://reactjs.org/) - A JavaScript Library used for building user interfaces. 
+* [Fullpage.js](https://alvarotrigo.com/fullPage/) - JavaScript library to create smooth scrolling animations between different sections of the webpage. 
+* [Anime.js](https://animejs.com/) - JavaScript library used to animate elements. 
+* [Material UI](https://material-ui.com/) - A popular CSS framework for React applications that develops responsive and mobile-first websites.
 
 ## License 
 
