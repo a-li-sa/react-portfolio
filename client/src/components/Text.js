@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 
 export const Text = (props => {
   return (
-    <Grid container justify="center" alignItems="center">
+    <Grid container justify="center" alignItems="center" style={{textAlign: props.name === "contact" ? "center" : "left"}}>
       <Grid item xs={8}>
         <Typography variant="h2">
           {props.text}

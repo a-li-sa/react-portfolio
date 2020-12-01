@@ -5,9 +5,8 @@ import {Form, Text} from '../components'
 
 export const ContactPage = () => {
   return (
-    <Grid container justify="center" alignItems="center">
+    <Grid container justify="center" alignItems="center" >
       <Grid item xs={9}>
-        <Text text={"Connect with me!"}/>
         <Form />
       </Grid>
     </Grid>

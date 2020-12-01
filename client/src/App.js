@@ -49,6 +49,7 @@ const App = fullpageProps => {
                 <PortfolioPage/>
               </div>
               <div className="section">
+                <Text name="contact" text={"Connect with me!"} />
                 <ContactPage/>
               </div>
             </div>
