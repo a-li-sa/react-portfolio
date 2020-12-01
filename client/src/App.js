@@ -3,8 +3,9 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import Grid from "@material-ui/core/Grid";
 
 import {AboutPage, ContactPage, HomePage, PortfolioPage} from './pages';
-import {AboutText, AnimatedSubtitle, Footer, NavBar} from './components'
+import {Text, AnimatedSubtitle, Footer, NavBar} from './components'
 import "./assets/styles.css";
+import Typography from "@material-ui/core/Typography";
 
 const fullpageOptions = {
   anchors: ['', 'about', 'portfolio', 'contact'],
@@ -15,6 +16,7 @@ const fullpageOptions = {
   slidesNavigation: true,
   slidesNavPosition: 'bottom',
   showActiveTooltip: true,
+  animateAnchor: false,
 };
 
 const App = fullpageProps => {
@@ -37,7 +39,7 @@ const App = fullpageProps => {
               </div>
               <div className="section">
                 <div className="slide" onClick={() => fullpageApi.moveTo('about', 1)} >
-                  <AboutText/>
+                  <Text text={"My name is Alisa Poon, and I am a fullstack developer. Born and raised in San Francisco but constantly changing, I always seek new opportunities to learn and grow. I am excited to be a part of projects that will enhance productivity and creativity."}/>
                 </div>
                 <div className="slide" onClick={() => fullpageApi.moveTo('about', 0)}>
                   <AboutPage/>

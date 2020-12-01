@@ -1,4 +1,4 @@
-export * from './AboutText'
+export * from './Text'
 export * from './AnimatedLogo';
 export * from './AnimatedSubtitle';
 export * from './Footer';
