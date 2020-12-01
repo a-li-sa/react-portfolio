@@ -34,6 +34,10 @@ export const Form = () => {
       email,
       subject: `${name}: ${subject}`,
       text,
+    }, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
     })
       .then(res => {
         clearStates();
