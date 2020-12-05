@@ -3,7 +3,6 @@ import anime from 'animejs/lib/anime.es.js';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import Tooltip from '@material-ui/core/Tooltip';
 import {makeStyles, withStyles} from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles({
   root: {

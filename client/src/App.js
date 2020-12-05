@@ -2,7 +2,7 @@ import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import Grid from "@material-ui/core/Grid";
 
-import {AboutPage, ContactPage, HomePage, PortfolioPage} from './pages';
+import {AboutPage, ContactPage, HomePage, PortfolioPage, TimelinePage, } from './pages';
 import {Text, AnimatedSubtitle, AnimatedPrompt, Footer, NavBar} from './components'
 import "./assets/styles.css";
 
@@ -43,7 +43,10 @@ const App = fullpageProps => {
               </div>
               <div className="section">
                 <div className="slide" onClick={() => fullpageApi.moveTo('about', 1)} >
-                  <Text text={"My name is Alisa Poon, and I am a fullstack developer. Born and raised in San Francisco but constantly changing, I always seek new opportunities to learn and grow. I am excited to be a part of projects that will enhance productivity and creativity."}/>
+                  <Text text={"My name is Alisa Poon, and I am a fullstack developer. Born and raised in San Francisco, I always seek new opportunities to learn and grow. I am excited to work on impactful projects."}/>
+                </div>
+                <div className="slide" onClick={() => fullpageApi.moveTo('about', 2)}>
+                  <TimelinePage/>
                 </div>
                 <div className="slide" onClick={() => fullpageApi.moveTo('about', 0)}>
                   <AboutPage/>
@@ -53,7 +56,6 @@ const App = fullpageProps => {
                 <PortfolioPage/>
               </div>
               <div className="section">
-                <Text name="contact" text={"Connect with me!"} />
                 <ContactPage/>
               </div>
             </div>
