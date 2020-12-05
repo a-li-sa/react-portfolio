@@ -24,7 +24,7 @@ const App = fullpageProps => {
       <ReactFullpage
         {...fullpageProps}
         {...fullpageOptions}
-        licenseKey={'your key'}
+        licenseKey={process.env.REACT_APP_LICENSE_KEY}
         render={({ state, fullpageApi }) => {
           return (
             <div>

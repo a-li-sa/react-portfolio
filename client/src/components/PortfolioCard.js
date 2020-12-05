@@ -58,8 +58,8 @@ export function PortfolioCard(props) {
           </Modal>
         </Grid>
         <Grid item>
-          <Box square component={Paper} variant="outlined" style={{backgroundColor: '#eaeaea', padding: '0px 150px 4px 150px',}}>
-            <Box elevation={0} square style={{borderRadius: '0px 0px 30px 30px', backgroundColor: '#dedddd', padding: '2px 20px'}}>
+          <Box component={Paper} square variant="outlined" style={{backgroundColor: '#eaeaea', padding: '0px 150px 4px 150px',}}>
+            <Box elevation={0} style={{borderRadius: '0px 0px 30px 30px', backgroundColor: '#dedddd', padding: '2px 20px'}}>
             </Box>
           </Box>
         </Grid>

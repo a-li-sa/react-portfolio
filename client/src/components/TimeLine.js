@@ -76,7 +76,7 @@ export const TimeLine = () => {
         <TimelineContent>
           <Box p={1} component={Paper} variant="outlined">
             <Typography variant="button" component="h2">
-              Graduate from UC Davis
+              UC Davis Graduate
             </Typography>
             <Typography variant="overline" color="textSecondary">
               March 2019

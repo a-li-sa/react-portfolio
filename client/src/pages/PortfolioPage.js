@@ -40,7 +40,7 @@ export const PortfolioPage = () => {
                           {title}
                         </Typography>
                       </Hidden>
-                      <Typography variant="subtitle">
+                      <Typography variant="body1">
                         {description}
                       </Typography>
                     </Box>
