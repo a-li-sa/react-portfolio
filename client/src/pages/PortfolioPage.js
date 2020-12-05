@@ -10,6 +10,7 @@ import {PortfolioCard} from "../components";
 import portfolioItems from '../apis/portfolioItems';
 import {withStyles} from "@material-ui/core/styles";
 import Tooltip from "@material-ui/core/Tooltip";
+import Hidden from "@material-ui/core/Hidden";
 
 const TextOnlyTooltip = withStyles({
   tooltip: {
@@ -29,9 +30,16 @@ export const PortfolioPage = () => {
                 <Grid container>
                   <Grid item xs={12} md={6}>
                     <Box ml={3} mr={3}>
-                      <Typography variant="h2">
-                        {title}
-                      </Typography>
+                      <Hidden smDown>
+                        <Typography variant="h2">
+                          {title}
+                        </Typography>
+                      </Hidden>
+                      <Hidden mdUp>
+                        <Typography variant="h2" style={{fontSize: 30}}>
+                          {title}
+                        </Typography>
+                      </Hidden>
                       <Typography variant="subtitle">
                         {description}
                       </Typography>

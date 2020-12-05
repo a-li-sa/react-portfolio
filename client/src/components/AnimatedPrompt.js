@@ -40,7 +40,7 @@ export const AnimatedPrompt = () => {
   });
 
   return (
-    <TextOnlyTooltip title="Scroll, swipe, use arrow keys, or use navigation menu to continue." placement="bottom">
+    <TextOnlyTooltip title="Scroll or use the navigation menu or your arrow keys to continue." placement="bottom">
       <KeyboardArrowDownIcon fontSize="large" id="prompt" className={classes.root} />
     </TextOnlyTooltip>
   )
