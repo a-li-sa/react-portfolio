@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import {ThemeProvider, createMuiTheme, withStyles} from "@material-ui/core/styles";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
-import { Textfield } from './Textfield';
-import axios from 'axios';
 import amber from '@material-ui/core/colors/amber';
 import IconButton from '@material-ui/core/IconButton';
 import EmailIcon from '@material-ui/icons/Email';
-import Tooltip from "@material-ui/core/Tooltip";
+import axios from 'axios';
+
+import { Textfield } from './Textfield';
+
 
 export const Form = () => {
   const theme = createMuiTheme({
@@ -15,12 +16,6 @@ export const Form = () => {
       primary: amber,
     },
   });
-  const TextOnlyTooltip = withStyles({
-    tooltip: {
-      backgroundColor: "black",
-      fontSize: 14,
-    }
-  })(Tooltip);
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -83,16 +78,14 @@ export const Form = () => {
         multiline
         rows={5}
       />
-      <TextOnlyTooltip title="Send your message!" placement="right">
-        <IconButton
-          variant="contained"
-          color="primary"
-          onClick={handleSubmit}
-          disabled={name === "" || email === "" || subject === "" || text === "" ? true : false}
-        >
-          <EmailIcon/>
-        </IconButton>
-      </TextOnlyTooltip>
+      <IconButton
+        variant="contained"
+        color="primary"
+        onClick={handleSubmit}
+        disabled={name === "" || email === "" || subject === "" || text === "" ? true : false}
+      >
+        <EmailIcon/>
+      </IconButton>
       <Snackbar
         anchorOrigin={{
           vertical: 'bottom',
