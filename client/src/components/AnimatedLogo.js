@@ -8,23 +8,21 @@ export const AnimatedLogo = () => {
     anime({
       targets: '#logo',
       rotate: {
-        value: '-1turn',
-        duration: 9000,
+        value: '-180',
+        duration: 4000,
         easing: 'linear',
+        delay: 1000,
+        endDelay: 1000,
       },
+      direction: 'alternate',
       loop: true,
     })
     anime({
-      rotate: {
-        value: '-1turn',
-        duration: 9000,
-        easing: 'linear',
-      },
       targets: '#logo',
       translateY: [100, 0],
       duration: 1000,
       opacity: [0, 1],
-      easing: 'easeInOutExpo'
+      easing: 'easeInOutExpo',
     });
   }, [])
   return (

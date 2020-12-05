@@ -3,9 +3,8 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import Grid from "@material-ui/core/Grid";
 
 import {AboutPage, ContactPage, HomePage, PortfolioPage} from './pages';
-import {Text, AnimatedSubtitle, Footer, NavBar} from './components'
+import {Text, AnimatedSubtitle, AnimatedPrompt, Footer, NavBar} from './components'
 import "./assets/styles.css";
-import Typography from "@material-ui/core/Typography";
 
 const fullpageOptions = {
   anchors: ['', 'about', 'portfolio', 'contact'],
@@ -30,12 +29,15 @@ const App = fullpageProps => {
           return (
             <div>
               <div className="section">
-                <Grid container justify="center" alignItems="center">
+                <Grid container direction="column" justify="center" alignItems="center">
                   <Grid item>
                     <HomePage/>
                   </Grid>
                   <Grid item>
                     <AnimatedSubtitle onClick={() => fullpageApi.moveSectionDown()}/>
+                  </Grid>
+                  <Grid item>
+                    <AnimatedPrompt/>
                   </Grid>
                 </Grid>
               </div>

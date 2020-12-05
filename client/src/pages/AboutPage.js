@@ -3,11 +3,10 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box"
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import Hidden from '@material-ui/core/Hidden';
 
 import { TimeLine } from '../components';
 
-export const AboutPage = (props) => {
+export const AboutPage = () => {
   return (
       <Grid container justify="center" alignItems="center">
         <Grid item md={10}>

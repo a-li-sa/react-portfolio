@@ -13,7 +13,7 @@ export const Text = (props => {
             </Typography>
           </Hidden>
           <Hidden mdUp>
-            <Typography variant="h5">
+            <Typography variant="h2" style={{fontSize: 30}}>
               {props.text}
             </Typography>
           </Hidden>

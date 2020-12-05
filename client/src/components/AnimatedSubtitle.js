@@ -11,6 +11,7 @@ const useStyles = makeStyles({
   },
 });
 
+
 export const AnimatedSubtitle = (props) => {
   const classes = useStyles();
   anime({

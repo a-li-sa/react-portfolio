@@ -1,8 +1,6 @@
 <div align="center">
 
-# Alisa's Responsive Portfolio
-
-Built with HTML, CSS, JavaScript, and Bootstrap.
+# Alisa's React Portfolio
 
 Deployed Website: https://alisapoon.herokuapp.com/
 
