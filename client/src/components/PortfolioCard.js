@@ -1,45 +1,23 @@
 import React from 'react';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box'
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
+import Grid from "@material-ui/core/Grid";
+import Paper from '@material-ui/core/Paper';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import IconButton from '@material-ui/core/IconButton';
-import CodeIcon from '@material-ui/icons/Code';
-import ComputerIcon from '@material-ui/icons/Computer';
-import Tooltip from "@material-ui/core/Tooltip";
 
 const useStyles = makeStyles({
-  root: {
-    textAlign: "center",
-  },
-  media: {
-    height: '50vh',
-  },
   modal: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  action: {
-    display: 'flex',
-    justifyContent: 'center',
+  image: {
+    cursor: "pointer",
+    textAlign: "center",
   }
 });
-
-const TextOnlyTooltip = withStyles({
-  tooltip: {
-    backgroundColor: "black",
-    fontSize: 14,
-  }
-})(Tooltip);
-
 
 export function PortfolioCard(props) {
   const classes = useStyles();
@@ -53,50 +31,39 @@ export function PortfolioCard(props) {
   };
 
   return (
-    <Box m={4}>
-      <Card className={classes.root} variant="outlined">
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.title}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {props.description}
-          </Typography>
-        </CardContent>
-        <CardActionArea onClick={handleOpen}>
-          <CardMedia
-            className={classes.media}
-            image={props.imageUrl}
-            title={props.title}
-          />
-        </CardActionArea>
-        <Modal
-          className={classes.modal}
-          open={open}
-          onClick={handleClose}
-          closeAfterTransition
-          BackdropComponent={Backdrop}
-          BackdropProps={{
-            timeout: 500,
-          }}
-        >
-          <Fade in={open}>
-            <img src={props.imageUrl} alt={props.title} style={{height: '100%'}}/>
-          </Fade>
-        </Modal>
-        <CardActions className={classes.action}>
-          <TextOnlyTooltip title="GitHub Repository" placement="left">
-            <IconButton  color="inherit" href={props.githubUrl} target="_blank">
-              <CodeIcon/>
-            </IconButton>
-          </TextOnlyTooltip>
-          <TextOnlyTooltip title="Deployed Application" placement="right">
-            <IconButton color="inherit" href={props.appUrl} target="_blank">
-              <ComputerIcon/>
-            </IconButton>
-          </TextOnlyTooltip>
-        </CardActions>
-      </Card>
+    <Box>
+      <Grid container direction="column" alignItems="center" justify="center" style={{textAlign: "center"}}>
+        <Grid item>
+          <Box component={Paper} variant="outlined" style={{backgroundColor: '#dedddd', padding: '4px'}}>
+            <Box component={Paper} variant="outlined" style={{color: '#dedddd', backgroundColor: 'black'}}>
+              ∙
+              <Box ml={2} mr={2} mb={2} component={Paper} elevation={0} square>
+                <img src={props.imageUrl} alt={props.title} width={250} onClick={handleOpen} className={classes.image}/>
+              </Box>
+            </Box>
+          </Box>
+          <Modal
+            className={classes.modal}
+            open={open}
+            onClick={handleClose}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 500,
+            }}
+          >
+            <Fade in={open}>
+              <img src={props.imageUrl} alt={props.title} style={{width: '90%'}}/>
+            </Fade>
+          </Modal>
+        </Grid>
+        <Grid item>
+          <Box square component={Paper} variant="outlined" style={{backgroundColor: '#eaeaea', padding: '0px 150px 4px 150px',}}>
+            <Box elevation={0} square style={{borderRadius: '0px 0px 30px 30px', backgroundColor: '#dedddd', padding: '2px 20px'}}>
+            </Box>
+          </Box>
+        </Grid>
+      </Grid>
     </Box>
   );
 }
