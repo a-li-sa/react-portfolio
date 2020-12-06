@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import Snackbar from '@material-ui/core/Snackbar';
+import { Snackbar, IconButton } from '@material-ui/core';
 import MuiAlert from '@material-ui/lab/Alert';
 import amber from '@material-ui/core/colors/amber';
-import IconButton from '@material-ui/core/IconButton';
 import EmailIcon from '@material-ui/icons/Email';
 import axios from 'axios';
 

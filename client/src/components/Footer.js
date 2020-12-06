@@ -1,9 +1,6 @@
 import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box"
-import Tooltip from '@material-ui/core/Tooltip';
-import IconButton from '@material-ui/core/IconButton';
+import { Grid, Box, Tooltip, IconButton } from "@material-ui/core";
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
