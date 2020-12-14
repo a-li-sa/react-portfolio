@@ -1,8 +1,12 @@
 body {font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;}
 .fp-slidesNav {text-align:center;overflow:hidden;}
 #fp-nav {top: 60px!important;}
-.fp-tooltip {color: #000!important;}
+.fp-tooltip {
+    color: #000!important;
+    font-size: 17px!important;
+}
 /*.fp-controlArrow{*/
 /*    display:none;*/
 /*}*/
 .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {border-color: transparent #000!important;}
+

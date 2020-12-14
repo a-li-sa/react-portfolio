@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import Grid from "@material-ui/core/Grid";
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 import {AboutPage, ContactPage, HomePage, PortfolioPage, TimelinePage, } from './pages';
 import {Text, AnimatedSubtitle, AnimatedPrompt, Footer, NavBar} from './components'

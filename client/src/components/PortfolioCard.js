@@ -35,7 +35,7 @@ export function PortfolioCard(props) {
   };
 
   return (
-    <div className="slide" key={props.title}>
+    <div className="slide">
       <Grid container alignItems="center">
         <Grid item xs={12} md={6} lg={8}>
           <Box ml={3} mr={3}>
