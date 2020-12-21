@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import Grid from "@material-ui/core/Grid";
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
-import {AboutPage, ContactPage, HomePage, PortfolioPage, TimelinePage, } from './pages';
+import {AboutPage, ContactPage, HomePage, PortfolioPage, TimelinePage, SkillsPage } from './pages';
 import {Text, AnimatedSubtitle, AnimatedPrompt, Footer, NavBar} from './components'
 import "./assets/styles.css";
 
 const fullpageOptions = {
-  anchors: ['', 'about', 'portfolio', 'contact'],
+  anchors: ['', 'about', 'skills', 'portfolio', 'contact'],
   navigation: true,
   navigationPosition: 'left',
-  navigationTooltips: ['Home', 'About', 'Portfolio', 'Contact'],
+  navigationTooltips: ['Home', 'About', 'Skills', 'Portfolio', 'Contact'],
   scrollOverflow: true,
   slidesNavigation: true,
   slidesNavPosition: 'bottom',
@@ -52,6 +51,9 @@ const App = fullpageProps => {
                 <div className="slide" onClick={() => fullpageApi.moveTo('about', 0)}>
                   <AboutPage/>
                 </div>
+              </div>
+              <div className="section">
+                <SkillsPage/>
               </div>
               <div className="section">
                 <PortfolioPage/>

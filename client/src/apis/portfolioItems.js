@@ -1,5 +1,12 @@
 const portfolioItems = [
   {
+    title: "Workspace",
+    description: "Workspace, an application built with React, MySQL, and Material Table, allows employers to enable their employees the ability to be able to reserve a seat that they need on a certain day. Many employees don't work on site every day as hot-desking is becoming more popular.",
+    githubUrl: "https://github.com/berjonbatistiana/seat-down",
+    appUrl: "http://nybor.herokuapp.com/#/",
+    imageUrl: "https://i.imgur.com/gaLV1Lu.jpg",
+  },
+  {
     title: "Google Books Search",
     description: "This React-based application queries and display books based on user searches and the user's saved books. This application was also built with Node, Express and MongoDB.",
     githubUrl: "https://github.com/a-li-sa/google-books-search",
