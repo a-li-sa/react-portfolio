@@ -23,6 +23,24 @@ export const TimeLine = () => {
       <TimelineItem>
         <TimelineSeparator>
           <StyledTimelineDot color="primary">
+            <i className="fas fa-laptop"></i>
+          </StyledTimelineDot>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          <Box p={1} component={Paper} variant="outlined">
+            <Typography variant="button" component="h2">
+              QA Tester at Hogarth Worldwide Inc
+            </Typography>
+            <Typography variant="overline" color="textSecondary">
+              March 2021 - Present
+            </Typography>
+          </Box>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <StyledTimelineDot color="primary">
             <i className="fas fa-school"></i>
           </StyledTimelineDot>
           <TimelineConnector />
@@ -33,7 +51,7 @@ export const TimeLine = () => {
               Student at UC Berkeley Extension
             </Typography>
             <Typography variant="overline" color="textSecondary">
-              June 2020 - Present
+              June 2020 - December 2021
             </Typography>
             <Typography variant="body2" component="p">
               Berkeley Coding Boot Camp

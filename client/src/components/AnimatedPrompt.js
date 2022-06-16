@@ -19,7 +19,7 @@ const TextOnlyTooltip = withStyles({
   }
 })(Tooltip);
 
-export const AnimatedPrompt = () => {
+export const AnimatedPrompt = (props) => {
   const classes = useStyles();
   anime({
     targets: '#prompt',
@@ -40,7 +40,7 @@ export const AnimatedPrompt = () => {
   });
 
   return (
-    <TextOnlyTooltip title="Scroll or use the navigation menu or your arrow keys to continue." placement="bottom">
+    <TextOnlyTooltip title="Scroll or use the navigation menu or your arrow keys to continue." placement="bottom" onClick={props.onClick}>
       <KeyboardArrowDownIcon fontSize="large" id="prompt" className={classes.root} />
     </TextOnlyTooltip>
   )

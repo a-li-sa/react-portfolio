@@ -37,7 +37,7 @@ const App = fullpageProps => {
                     <AnimatedSubtitle onClick={() => fullpageApi.moveSectionDown()}/>
                   </Grid>
                   <Grid item>
-                    <AnimatedPrompt/>
+                    <AnimatedPrompt onClick={() => fullpageApi.moveSectionDown()}/>
                   </Grid>
                 </Grid>
               </div>
